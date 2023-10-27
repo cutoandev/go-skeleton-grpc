@@ -1,0 +1,13 @@
+version: '3.5'
+
+services:
+  skeleton-grpc:
+    container_name: skeleton-grpc-local
+    build:
+      context: ""
+      dockerfile: ../Dockerfile
+    image: skeleton-grc-local:1.0
+    env_file:
+      - ../_envs/local.env
+    ports:
+      - 5001:5001
